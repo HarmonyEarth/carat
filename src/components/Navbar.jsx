@@ -41,19 +41,19 @@ const Navbar = () => {
             </div>
             { activeMenu && (
                 <Menu theme='dark'>
-                    <Menu.Item icon={<HomeOutlined/>}>
+                    <Menu.Item icon={<HomeOutlined/>} style={{ color:'#fff' }}>
                         <Link to='/'>Home</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<FundOutlined />}>
+                    <Menu.Item icon={<FundOutlined />} style={{ color:'#fff' }}>
                         <Link to='/coins'>Coins</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<DollarOutlined />}>
+                    <Menu.Item icon={<DollarOutlined />}  style={{ color:'#fff' }}>
                         <Link to='/exchanges'>Exchanges</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<ReadOutlined />}>
+                    <Menu.Item icon={<ReadOutlined />}  style={{ color:'#fff' }}>
                         <Link to='/news'>News</Link>
                     </Menu.Item>
-                    <Menu.Item icon={<GithubOutlined />}>
+                    <Menu.Item icon={<GithubOutlined />} style={{ color:'#fff' }} >
                         <a href='https://github.com/HarmonyEarth/carat' target='_blank' rel='noreferrer'>View on GitHub</a>
                     </Menu.Item>
                 </Menu>
