@@ -81,7 +81,7 @@ a.ant-typography, .ant-typography a:hover {
 }
 
 .ant-typography a, a.ant-typography{
-    color: #1890ff !important;
+    color: #1890ff;
 }
 
 
