@@ -79,6 +79,12 @@ a.ant-typography, .ant-typography a:hover {
 .logo a{
    color: white !important;
 }
+
+.ant-typography a, a.ant-typography{
+    color: #1890ff !important;
+}
+
+
 .menu-control-container{
     display: none !important;
     position: absolute !important;
