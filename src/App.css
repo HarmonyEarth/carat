@@ -84,6 +84,21 @@ a.ant-typography, .ant-typography a:hover {
     color: #1890ff;
 }
 
+.ant-menu-dark .ant-menu-item > span > a {
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.ant-menu-item a:hover {
+    background-image: linear-gradient(-45deg, #53D6FF, #666BE1, #E45372, #F07C63) !important;
+    background-size: 400% !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Gradient 15s ease infinite !important;
+    -moz-animation: Gradient 15s ease infinite !important;
+    animation: Gradient 15s ease infinite !important;
+}
 
 .menu-control-container{
     display: none !important;
