@@ -14,5 +14,6 @@ If you want to build yourself follow the instructions below. Otherwise you can v
 - `REACT_APP_BINGNEWS_KEY=`
 - `REACT_APP_COINRANKING_KEY=`
 4. Add your keys to the env
-5. To then run the app, in the terminal, type: `npm start`
+5. In the terminal in the directory of the project, type: `npm install`
+6. To then run the app, in the terminal, type: `npm start`
 
