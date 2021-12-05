@@ -4,6 +4,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This app allows you to view statistics and information for the top 100 cryptocurrency. The logo and branding is from [CARAT](https://powerrangers.fandom.com/wiki/Caring_And_Radical_Ambitious_Team) a fictional organization from the show [Mashin Sentai Kiramager](https://powerrangers.fandom.com/wiki/Mashin_Sentai_Kiramager). ![Mashin Sentai Kiramager Logo](https://i.pinimg.com/originals/69/17/ea/6917ea3f25f9d1d8aeac823a7504410f.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
