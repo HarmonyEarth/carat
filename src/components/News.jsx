@@ -14,6 +14,8 @@ const { Option } = Select;
 
 const defaultImage = 'https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=687&q=80'
 
+let windowSizeMobile = window.matchMedia('(max-width: 576px)')
+
 const News = ({ simplified }) => {
     const [newsCategory, setNewsCategory] = useState('Cryptocurrency')
     const { data: coinNews } = useGetCoinNewsQuery({ newsCategory, count: simplified ? 6 : 18 });
@@ -47,7 +49,8 @@ const News = ({ simplified }) => {
                     <Card hoverable className='news-card'>
                         <a href={news.url} target='_blank' rel='noreferrer' >
                             <div className='news-image-container'>
-                            <Title className="news-title" level={4}>{news.name}</Title>
+                            <Title className="news-title" level={4}>{news.name.length > 50 && windowSizeMobile ?
+                             `${news.name.substring(0,50)}...` : news.name}</Title>
                             <img style={{ maxWidth:'100px', maxHeight: '100px' }}
                             src={news?.image?.thumbnail?.contentUrl || defaultImage } alt={`${news.name}`} />
                             </div>
