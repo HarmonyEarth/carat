@@ -39,6 +39,7 @@ const CoinDetails = () => {
 
   const time = ["24h", "7d", "30d", "1y", "5y"];
 
+  // Coinranking chose to name the key property for the 24 Hour Volume, 24hVolume
   const coin24hVolume = Object.values(coinDetails)[11];
 
   const stats = [
