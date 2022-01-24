@@ -6,7 +6,7 @@ This app allows you to view statistics and information for the top 100 cryptocur
 
 ## Instructions 
 
-If you want to build yourself follow the instructions below. Otherwise you can view the app here: [CARAT](http://carat-ten.vercel.app/)
+If you want to build yourself follow the instructions below. Otherwise you can view the app here: [CARAT](https://carat-alpha.vercel.app/)
 
 1. Go to [RapidAPI](https://rapidapi.com/) and create an account.
 2. Subscribe to the [Coinranking API](https://rapidapi.com/Coinranking/api/coinranking1/) and [Bing News Search API](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/) and get a key.
