@@ -22,7 +22,6 @@ const Coins = ({ simplified }) => {
     setCoins(filteredData);
   }, [coinsList, searchTerm]);
 
-  console.log("mua", coins);
   if (isFetching) return <Loader />;
 
   return (
