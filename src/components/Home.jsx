@@ -11,15 +11,13 @@ const { Title } = Typography;
 
 const Home = () => {
   const { data, isFetching } = useGetCoinsQuery(10);
+  const globalStats = data?.data?.stats;
 
   if (isFetching) return <Loader />;
-
-  const globalStats = data?.data?.stats;
 
   return (
     <>
       <Title level={2} className="heading">
-        {" "}
         Cryptocurrency Stats
       </Title>
       <Row gutter={[32, 32]}>
@@ -53,22 +51,18 @@ const Home = () => {
       </Row>
       <div className="home-heading-container">
         <Title level={2} className="home-title">
-          {" "}
-          Top 10 Cryptocurrency Coins{" "}
+          Top 10 Cryptocurrency Coins
         </Title>
         <Title level={3} className="show-more">
-          {" "}
           <Link to="/coins">Show More</Link>
         </Title>
       </div>
       <Coins simplified />
       <div className="home-heading-container">
         <Title level={2} className="home-title">
-          {" "}
-          Latest Crypto News{" "}
+          Latest Crypto News
         </Title>
         <Title level={3} className="show-more">
-          {" "}
           <Link to="/news">Show More</Link>
         </Title>
       </div>
