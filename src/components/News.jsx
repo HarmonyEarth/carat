@@ -21,8 +21,6 @@ const News = ({ simplified }) => {
     const { data: coinNews } = useGetCoinNewsQuery({ newsCategory, count: simplified ? 6 : 18 });
     const { data } = useGetCoinsQuery(100);
 
-    // console.log(coinNews);
-
     if(!coinNews?.value) return <Loader />;
 
     return (
