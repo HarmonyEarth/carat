@@ -29,8 +29,7 @@ const Coins = ({ simplified }) => {
       {!simplified && (
         <div className="search-crypto">
           <Title level={2} style={{ textAlign: "center" }}>
-            {" "}
-            Coins{" "}
+            Coins
           </Title>
           <Input
             placeholder="Search Coins"
@@ -54,15 +53,12 @@ const Coins = ({ simplified }) => {
                 hoverable
               >
                 <p style={{ fontWeight: "500" }}>
-                  {" "}
                   Price: {millify(coin.price)}{" "}
                 </p>
                 <p style={{ fontWeight: "500" }}>
-                  {" "}
                   Market Cap: {millify(coin.marketCap)}{" "}
                 </p>
                 <p style={{ fontWeight: "500" }}>
-                  {" "}
                   Daily Change: {millify(coin.change)}%{" "}
                 </p>
               </Card>
