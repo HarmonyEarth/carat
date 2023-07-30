@@ -171,10 +171,10 @@ const CoinDetails = () => {
       <Col className="coin-desc-link">
         <Row className="coin-desc">
           <Title level={3} className="coin-details-heading">
-            What is {coinDetails.name}?
-            {HTMLReactParser(
+            {`What is {coinDetails.name}? 
+            ${HTMLReactParser(
               coinDetails.description || "Description Not Available"
-            )}
+            )}`}
           </Title>
         </Row>
         <Col className="coin-links">
