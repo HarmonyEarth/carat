@@ -1,25 +1,29 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+const axios = require('axios');
 
 const coinNewsApiHeaders = {
-    'x-bingapis-sdk': 'true',
-    'x-rapidapi-host': 'bing-news-search1.p.rapidapi.com',
-    'x-rapidapi-key': `${process.env.REACT_APP_BINGNEWS_KEY}`
-}
+  'X-BingApis-SDK': 'true',
+  'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+  'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
+};
 
-const baseUrl = 'https://bing-news-search1.p.rapidapi.com';
+export const useGetCoinNewsQuery = async ({ newsCategory, count }) => {
+  const options = {
+    method: 'GET',
+    url: 'https://bing-news-search1.p.rapidapi.com/news/search',
+    params: {
+      q: newsCategory,
+      freshness: 'Day',
+      textFormat: 'Raw',
+      safeSearch: 'Moderate',
+      count: count
+    },
+    headers: coinNewsApiHeaders
+  };
 
-const createRequest = (url) => ({ url, headers: coinNewsApiHeaders });
-
-export const coinNewsApi = createApi({
-    reducerPath: 'coinNewsApi',
-    baseQuery: fetchBaseQuery({ baseUrl }),
-    endpoints: (builder) => ({
-        getCoinNews: builder.query({
-            query: ({newsCategory, count}) => createRequest(`/news/search?q=${newsCategory}&safeSearch=Moderate&textFormat=Raw&freshness=Day&count=${count}`),
-        })
-    })
-});
-
-export const {
-    useGetCoinNewsQuery,
-} = coinNewsApi;
+  try {
+    const response = await axios.request(options);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
